@@ -15,16 +15,16 @@ jobs:
       with:
         ref: 'main'
 
-    - name: Prerequistes
+    - name: Prerequisites
       run: sudo apt install libboost-all-dev libeigen3-dev
 
-    - name: Dowenload Nextpnr
+    - name: Download NextPnr
       run:  wget https://github.com/YosysHQ/nextpnr/archive/refs/heads/master.zip
 
     - name: Unzip
       run: unzip master.zip
 
-    - name: Compile
+    - name: Compile NextPnr
       run: |
         cd nextpnr-master/
         cmake . -DARCH=gowin -DGOWIN_BBA_EXECUTABLE=path
