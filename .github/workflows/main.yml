@@ -36,6 +36,9 @@ jobs:
     - name: apycula
       run: sudo pip install apycula
 
+    - name: apycula gowin
+      run: sudo pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ yowasp-yosys yowasp-nextpnr-gowin
+
     - name: Download NextPnr
       run:  wget https://github.com/YosysHQ/nextpnr/archive/refs/heads/master.zip
 
