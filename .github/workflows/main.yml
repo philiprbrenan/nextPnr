@@ -27,5 +27,5 @@ jobs:
     - name: Compile NextPnr
       run: |
         cd nextpnr-master/
-        cmake . -DARCH=gowin -DGOWIN_BBA_EXECUTABLE=path
+        cmake . -DARCH=gowin
         make
