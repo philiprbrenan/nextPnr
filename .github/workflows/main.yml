@@ -33,6 +33,9 @@ jobs:
     - name: Prerequisites
       run: sudo apt install libboost-all-dev libeigen3-dev
 
+    - name: apycula
+      run: pip install apycula
+
     - name: Download NextPnr
       run:  wget https://github.com/YosysHQ/nextpnr/archive/refs/heads/master.zip
 
@@ -42,5 +45,5 @@ jobs:
     - name: Compile NextPnr
       run: |
         cd nextpnr-master/
-        cmake . -DARCH=generic
+        cmake . -DARCH=gowin
         make
